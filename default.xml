@@ -11,10 +11,15 @@
   <remote
     name="github"
     review="https://git@github.com/"
-    revision="done_course"
+    revision="ioctl"
     fetch="https://github.com/"
   />
-
+  <remote
+    name="gitlab"
+    review="https://git@gitlab.com/"
+    revision="ioctl"
+    fetch="https://gitlab.com/"
+  />
 
   <project path="build/make" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -801,7 +806,7 @@
   <remove-project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <remove-project path="system/sepolicy" name="platform/system/sepolicy" groups="pdk" />
 
-  <project remote="github" path="build/make" name="MRUSS100/aosp-build-make.git" groups="pdk" >
+  <project remote="github" path="build/make" name="kheaactua/aosp-build-make.git" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -811,10 +816,10 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
 
-  <project remote="github" path="frameworks/base" name="MRUSS100/aosp-frameworks-base" groups="pdk-cw-fs,pdk-fs" />
-  <project remote="github" path="hardware/interfaces" name="MRUSS100/aosp-hardware-interfaces" groups="pdk" />
-  <project remote="github" path="hardware/libhardware" name="MRUSS100/aosp-hardware-libhardware" groups="pdk" />
-  <project remote="github" path="system/sepolicy" name="MRUSS100/aosp-system-sepolicy" groups="pdk" />
+  <project remote="gitlab" path="frameworks/base" name="khea_actua/aosp-frameworks-base" groups="pdk-cw-fs,pdk-fs" />
+  <project remote="github" path="hardware/interfaces" name="kheaactua/aosp-hardware-interfaces" groups="pdk" />
+  <project remote="github" path="hardware/libhardware" name="kheaactua/aosp-hardware-libhardware" groups="pdk" />
+  <project remote="github" path="system/sepolicy" name="kheaactua/aosp-system-sepolicy" groups="pdk" />
 
   <!-- /Training -->
 
